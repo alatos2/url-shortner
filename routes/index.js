@@ -1,7 +1,7 @@
-const express = require('express');
-const router = express.Router();
+import express from 'express';
+import Url from '../models/Url';
 
-const Url = require('../models/Url');
+const router = express.Router();
 
 // @route     GET /:code
 // @desc      Redirect to long/original URL
@@ -20,4 +20,4 @@ router.get('/:code', async (req, res) => {
   }
 });
 
-module.exports = router;
+export default router;

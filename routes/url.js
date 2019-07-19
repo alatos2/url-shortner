@@ -1,10 +1,14 @@
-const express = require('express');
+import express from 'express';
 const router = express.Router();
-const validUrl = require('valid-url');
-const shortid = require('shortid');
-const config = require('config');
+import validUrl from 'valid-url';
+import shortid from 'shortid';
+import config from 'config';
+import Url from '../models/Url';
 
-const Url = require('../models/Url');
+// const validUrl = require('valid-url');
+// const shortid = require('shortid');
+// const config = require('config');
+
 
 // @route     POST /api/url/shorten
 // @desc      Create short URL
@@ -50,4 +54,5 @@ router.post('/shorten', async (req, res) => {
   }
 });
 
-module.exports = router;
+export default router;
+// module.exports = router;
